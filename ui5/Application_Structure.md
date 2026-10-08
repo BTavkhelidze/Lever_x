@@ -26,7 +26,7 @@ A major version represents a major framework version line and can involve signif
 As a UI5 developer, the framework version is important because APIs and features may only be available starting from a specific UI5 version. We can also specify minUI5Version in the sap.ui5.dependencies section of the manifest to describe the minimum UI5 version required by the application.
 
 
-1. Know the different ways of app bootstrapping:
+4. Know the different ways of app bootstrapping:
 a. Standalone app.
 b. flpSandbox app.
 c. flpMockServer app.
@@ -47,3 +47,12 @@ Both can provide an FLP-like environment, but the mock server scenario additiona
 
 “Why would you use a mock server?”
 To develop and test the frontend independently of the real backend, for example when the backend is unavailable or not yet implemented.
+
+
+5. Know the configuration options and URL parameters of
+the app.
+
+In SAPUI5, we can configure the application and the UI5 runtime using bootstrap configuration options and URL parameters.
+For example, during bootstrap we can configure the UI5 theme, asynchronous loading, compatibility version, resource roots, and initialization module. Typical options are sap-ui-theme, sap-ui-async, sap-ui-compatVersion, and sap-ui-resourceRoots.
+We can also use URL parameters to influence the runtime, especially during development and testing. For example, sap-ui-debug=true enables debug mode, sap-language can be used to specify the language, and sap-ui-theme can be used to override the theme.
+I also distinguish URL query parameters from the URL hash. Query parameters can influence configuration, while the hash is normally used by the UI5 router for application navigation.
